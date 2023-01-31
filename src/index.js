@@ -18,13 +18,13 @@ function displayHome() {
   ul.appendChild(menuItem);
   const aboutItem = document.createElement("li");
   const aboutLink = document.createElement("a");
-  aboutLink.href = "#";
+  aboutLink.href = "./about.html";
   aboutLink.textContent = "ABOUT";
   aboutItem.appendChild(aboutLink);
   ul.appendChild(aboutItem);
   const contactItem = document.createElement("li");
   const contactLink = document.createElement("a");
-  contactLink.href = "#";
+  contactLink.href = "./contact.html";
   contactLink.textContent = "CONTACT";
   contactItem.appendChild(contactLink);
   ul.appendChild(contactItem);
@@ -47,6 +47,12 @@ function displayHome() {
   main.appendChild(logo);
   content.appendChild(main);
 
+  const button = document.createElement("a");
+  button.classList.add("button");
+  button.setAttribute("href", "./menu.html");
+  button.textContent = "SEE THE MENU";
+  main.appendChild(button);
+
   const footer = document.createElement("footer");
   const p = document.createElement("p");
   p.textContent = "Developed with ♡ by Zach Lamont";
@@ -54,6 +60,24 @@ function displayHome() {
   content.appendChild(footer);
 }
 
-if (window.location.pathname === '/dist/index.html') {
-    window.onload = displayHome;
+import displayMenu from "./menu.js";
+import displayAbout from "./about.js";
+import displayContact from "./contact.js";
+
+window.addEventListener("load", function () {
+  switch (document.title) {
+    case "Menu":
+      displayMenu();
+      break;
+    case "About":
+      displayAbout();
+      break;
+    case "Contact":
+      displayContact();
+      break;
+    default:
+      if (window.location.pathname === "/dist/index.html") {
+        displayHome();
+      }
   }
+});
