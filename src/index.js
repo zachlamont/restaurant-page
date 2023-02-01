@@ -76,8 +76,11 @@ window.addEventListener("load", function () {
       displayContact();
       break;
     default:
-      if (window.location.pathname === "/index.html") {
+      if (window.location.pathname === "/dist/index.html") {
         displayHome();
       }
   }
 });
+
+displayHome();
+
