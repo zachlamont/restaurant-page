@@ -12,7 +12,7 @@ body{
   height: 100%;
 }
 #content {
-  background-image: url("../background.jpg");
+  background-image: url("./background.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
