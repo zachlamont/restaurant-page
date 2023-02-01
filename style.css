@@ -12,7 +12,7 @@ body{
   height: 100%;
 }
 #content {
-    background-image: url(/background.jpg);
+  background-image: url("https://picsum.photos/id/1/200/300");
     background-size: cover;
     display: flex;
     flex-direction: column;
