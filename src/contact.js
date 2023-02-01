@@ -41,7 +41,7 @@ export default function displayContact() {
 
   //Create Main
   const main = document.createElement("main");
-  main.id = "menu-scroll-container";
+  main.id = "contact-scroll-container";
   const menuLogo = document.createElement("div");
   menuLogo.classList.add("menu-logo");
   const cafe = document.createElement("div");
@@ -64,12 +64,11 @@ export default function displayContact() {
   const p3 = document.createElement("p");
   p3.textContent = "1234 Seaside Avenue";
   const p4 = document.createElement("p");
-  p4.textContent =
-    "We would love to hear from you! If you have any questions or comments about our cafe or menu, please feel free to reach out to us using the form below or by giving us a call.";
+  p4.textContent = "Brazil, SA 12345";
   const p5 = document.createElement("p");
-  p5.textContent = "Café Fofinho";
+  p5.textContent = "Phone: (555) 555-5555";
   const p6 = document.createElement("p");
-  p6.textContent = "1234 Seaside Avenue";
+  p6.textContent = "Email: braziliancafe@email.com";
   menuContainer.append(h2, p1, p2, p3, p4, p5, p6);
   main.append(menuLogo);
   main.append(menuContainer);

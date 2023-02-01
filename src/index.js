@@ -7,6 +7,7 @@ function displayHome() {
   backgroundImage.classList.add("background-image");
   content.appendChild(backgroundImage);
 
+  //Create Header
   const header = document.createElement("header");
   const nav = document.createElement("nav");
   const ul = document.createElement("ul");
@@ -32,6 +33,7 @@ function displayHome() {
   header.appendChild(nav);
   content.appendChild(header);
 
+  //Create main
   const main = document.createElement("main");
   main.id = "scroll-container";
   const logo = document.createElement("div");
@@ -53,6 +55,7 @@ function displayHome() {
   button.textContent = "SEE THE MENU";
   main.appendChild(button);
 
+  //Create Footer
   const footer = document.createElement("footer");
   const p = document.createElement("p");
   p.textContent = "Developed with ♡ by Zach Lamont";
